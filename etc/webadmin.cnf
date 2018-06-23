@@ -1,0 +1,6 @@
+[client]
+host = db
+database = picloud
+user = root
+password = picloud
+default-character-set = utf8
