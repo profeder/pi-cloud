@@ -1,16 +1,17 @@
-{# Load the tag library #}
 {% load bootstrap3 %}
+{% load static %}
 
-{# Load CSS and JavaScript #}
 {% bootstrap_css %}
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" />
 {% bootstrap_javascript %}
 
 <div class="container">
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-        <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+        <img src="{% static 'images/logo.png' %}" height="30" alt="PI Cloud">
     </a>
+        {% block navmenu %}
+        {% endblock %}
 </nav>
 
     {% block content %}

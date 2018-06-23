@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.template import loader
-from django.contrib.auth import authenticate, logout
-from django.contrib.auth import login as auth_login
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as auth_login, logout as auth_logout
+
 
 @login_required
 def home(request):
@@ -25,5 +26,5 @@ def login(request):
     return HttpResponse(template.render(context, request))
 
 
-def logout_view(request):
-    logout(request)
+def logout(request):
+    return auth_logout(request)
