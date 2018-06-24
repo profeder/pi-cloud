@@ -14,4 +14,3 @@ class Credential(models.Model):
     password = models.CharField(max_length=100)
     begin_date = models.DateTimeField(auto_now_add=True, blank=True)
     end_date = models.DateTimeField(null=True, blank=True)
-

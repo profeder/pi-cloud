@@ -1,0 +1,7 @@
+[agentInfo]
+name = Agent
+deviceToken =
+
+[server]
+address = localhost
+port = 8000
