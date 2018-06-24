@@ -5,7 +5,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: picloud
-      MYSQL_DATABASE: mysqlapp
+      MYSQL_DATABASE: picloud
     volumes:
       - ./data:/var/lib/mysql
     ports:

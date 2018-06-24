@@ -8,7 +8,9 @@ from django.contrib.auth import login as auth_login, logout as auth_logout
 
 @login_required
 def home(request):
-    return HttpResponse('Homepage')
+    template = loader.get_template('home.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
 
 def login(request):
     template = loader.get_template('login.html')
