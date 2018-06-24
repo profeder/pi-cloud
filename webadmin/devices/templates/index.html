@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        {{nPages}}
+        {% if devices.all %}
+        <table class="table">
+            <thead>
+                <th scope="col">Name</th>
+                <th scope="col">Identity</th>
+                <th scope="col">IP Address</th>
+                <th scope="col">Agent Port</th>
+                <th scope="col">NAT hidden</th>
+                <th scope="col">Last contact</th>
+            </thead>
+            {% for d in devices %}
+            <tr>
+                <td >{{d.name}}</td>
+                <td>{{d.keyClient}}</td>
+                <td>{{d.address}}</td>
+                <td>{{d.agentPort}}</td>
+                <td>{{d.natHidden}}</td>
+                <td>{{d.lastContact}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <p>No devices registered on this server.</p>
+        <p>Please register new device clicking <a href="/devices/new">here</a></p>
+        {% endif %}
+{% endblock %}
