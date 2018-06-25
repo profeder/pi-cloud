@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'devices.apps.DevicesConfig',
     'main.apps.MainConfig',
     'instances.apps.InstancesConfig',
+    'rest.apps.RestConfig',
     'bootstrap3',
 ]
 

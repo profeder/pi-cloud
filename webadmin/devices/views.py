@@ -9,12 +9,15 @@ import random, string
 @login_required
 def index(request):
     devices = Device.objects.all()
-    nPages =Device.objects.count()
+    nRecords = Device.objects.count()
+    nPages = nRecords / 25
     template = loader.get_template('index.html')
     context = {
         'devices': devices,
-        'pages': nPages
+        'pages': nPages,
+        'records': nRecords
     }
+    print(nPages)
     return HttpResponse(template.render(context, request))
 
 @login_required

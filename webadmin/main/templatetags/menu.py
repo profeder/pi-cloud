@@ -14,7 +14,6 @@ def getBuildMenu(user, perms):
         models = MenuItem.objects.order_by('super_item_id', 'order')
         for item in models:
             if item.super_item_id is None:
-                print(user.has_perm(item.permission.codename))
                 if user.has_perm(item.permission.codename):
                     items.append(item)
     return items

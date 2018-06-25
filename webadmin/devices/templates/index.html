@@ -11,15 +11,17 @@
                 <th scope="col">Agent Port</th>
                 <th scope="col">NAT hidden</th>
                 <th scope="col">Last contact</th>
+                <th></th>
             </thead>
             {% for d in devices %}
             <tr>
                 <td >{{d.name}}</td>
-                <td>{{d.keyClient}}</td>
+                <td>{{d.clientKey}}</td>
                 <td>{{d.address}}</td>
                 <td>{{d.agentPort}}</td>
                 <td>{{d.natHidden}}</td>
                 <td>{{d.lastContact}}</td>
+                <td></td>
             </tr>
             {% endfor %}
         </table>
